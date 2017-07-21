@@ -4,7 +4,7 @@ Base project to understand the greatest framework ever
 ## Requirements
 
 - [Node and npm](http://nodejs.org)
-- [Git] (https://git-scm.com/)
+- [Git](https://git-scm.com/)
 
 ## Installation
 
