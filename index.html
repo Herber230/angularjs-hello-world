@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app.helloworld">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de AngularJS</title>
+</head>
+<body>
+    <h1>Hola {{nombre}}</h1>
+    <br/>
+    <p>{{nombre.length}}</p>
+    <input type="text" ng-model="nombre" />
+    <br/><br/><br/><br/>
+    <div ng-controller="ControladorPrincipal as vm">
+        <center>
+            <table>            
+                <thead>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>Edad</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="persona in vm.personas">
+                        <td>{{persona.nombre}}</td>
+                        <td>{{persona.edad}}</td>
+                        <td><button ng-click="vm.eliminarPersona(persona)">Eliminar</button> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/><br/>
+            Nueva Persona:<br/><br/>
+            Nombre:<input ng-model="vm.nuevaPersona.nombre"/><br/><br/>
+            Edad:<input ng-model="vm.nuevaPersona.edad"/><br/><br/>            
+            <button ng-click="vm.agregarNuevaPersona()">Agregar Nueva Persona</button>
+        </center>        
+    </div>
+    <br/>    
+    <br/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+    <script src="app/js/app.js"></script> 
+</body>
+</html>
